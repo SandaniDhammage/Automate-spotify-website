@@ -33,9 +33,9 @@ public class CreateNewPlaylist {
 
 
             wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//input[@id='login-username']")))
-                    .sendKeys("sandanid01@gmail.com");
+                    .sendKeys("enter valid email");
             driver.findElement(By.xpath("//input[@id='login-password']"))
-                    .sendKeys("Dasunika@01");
+                    .sendKeys("enter valid password");
             driver.findElement(By.xpath("//button[@id='login-button']")).click();
 
             // Confirm login success

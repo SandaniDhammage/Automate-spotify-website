@@ -32,11 +32,11 @@ public class SpotifyLogin {
 
 
             WebElement username = wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//input[@id='login-username']")));
-            username.sendKeys("sandanid01@gmail.com");
+            username.sendKeys("enter valid email");
 
 
             WebElement password = wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//input[@id='login-password']")));
-            password.sendKeys("Dasunika@01");
+            password.sendKeys("enter valid password");
 
 
             WebElement loginButton = wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//button[@id='login-button']")));
@@ -56,11 +56,11 @@ public class SpotifyLogin {
 
 
             WebElement username = wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//input[@id='login-username']")));
-            username.sendKeys("sandanid01gmail.com");
+            username.sendKeys("enter invalid email");
 
 
             WebElement password = wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//input[@id='login-password']")));
-            password.sendKeys("Dasunika@01");
+            password.sendKeys("enter valid password");
 
 
             WebElement loginButton = wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//button[@id='login-button']")));
@@ -85,11 +85,11 @@ public class SpotifyLogin {
 
 
             WebElement username = wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//input[@id='login-username']")));
-            username.sendKeys("sandanid01@gmail.com");
+            username.sendKeys("enter valid email");
 
 
             WebElement password = wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//input[@id='login-password']")));
-            password.sendKeys("Dasunika01");
+            password.sendKeys("ener invalid password");
 
 
             WebElement loginButton = wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//button[@id='login-button']")));
