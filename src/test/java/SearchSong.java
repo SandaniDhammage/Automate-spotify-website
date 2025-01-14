@@ -41,7 +41,7 @@ public class SearchSong {
             wait.until(ExpectedConditions.presenceOfElementLocated(By.xpath("//span[@class='encore-text encore-text-body-small-bold LKfKy7bXKmlkMEANVJMS']")));
             System.out.println("Login successful!");
 
-            //  Save Login State (Cookies)
+
             Set<Cookie> cookies = driver.manage().getCookies();
 
             //  Search and Add Product to Cart
@@ -50,19 +50,18 @@ public class SearchSong {
             for (Cookie cookie : cookies) {
                 driver.manage().addCookie(cookie); // Reapply cookies for login state
             }
-           // driver.navigate().refresh(); // Refresh to apply login state
+
             Thread.sleep(3000);
             WebElement searchBar = wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//input[@placeholder='What do you want to play?']")));
 
-// Interact with the search bar
+
             searchBar.click(); // Ensure the search bar is active
             searchBar.clear(); // Clear any pre-filled content
             searchBar.sendKeys("perfect");
             Thread.sleep(3000);// Enter the song name
             searchBar.sendKeys(Keys.ENTER); // Simulate pressing 'Enter' to search
 
-// Optionally, verify that search results appear
-           // wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//h1[contains(text(), 'Songs')]")));
+
             System.out.println("Song search completed!");
             Thread.sleep(3000);
             wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//div[@class='ouEZqTcvcvMfvezimm_J']"))).click();

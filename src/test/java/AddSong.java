@@ -42,22 +42,22 @@ public class AddSong {
             //  Save Login State (Cookies)
             Set<Cookie> cookies = driver.manage().getCookies();
 
-            //  Search and Add Product to Cart
+
             System.out.println("Navigating to Home page...");
             driver.get("https://open.spotify.com/");
             for (Cookie cookie : cookies) {
-                driver.manage().addCookie(cookie); // Reapply cookies for login state
+                driver.manage().addCookie(cookie);
             }
-            // driver.navigate().refresh(); // Refresh to apply login state
+
             Thread.sleep(3000);
             WebElement playlist = wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//li[@class='NxEINIJHGytq4gF1r2N1 or84FBarW2zQhXfB9VFb odS2IW9wfNVHhkhc0l_X O0AN8Ty_Cxd4iLwyKATB XNjgtSbyhshr7YQcVvry vSC5QuwmzUhqUNWdMTJ5']//div[@role='button']")));
 
-// Interact with the search bar
+
             playlist.click();
             WebElement searchbar = wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//input[@placeholder='Search for songs or episodes']")));
 
-            // Ensure the search bar is active
-            searchbar.clear(); // Clear any pre-filled content
+
+            searchbar.clear();
             searchbar.sendKeys("perfect");
             Thread.sleep(3000);// Enter the song name
             searchbar.sendKeys(Keys.ENTER); // Simulate pressing 'Enter' to search

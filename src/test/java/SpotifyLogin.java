@@ -7,7 +7,7 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 
-import java.sql.SQLOutput;
+
 import java.time.Duration;
 
 public class SpotifyLogin {

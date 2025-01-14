@@ -45,13 +45,13 @@ public class CreateNewPlaylist {
             //  Save Login State (Cookies)
             Set<Cookie> cookies = driver.manage().getCookies();
 
-            //  Search and Add Product to Cart
+
             System.out.println("Navigating to Home page...");
             driver.get("https://open.spotify.com/");
             for (Cookie cookie : cookies) {
-                driver.manage().addCookie(cookie); // Reapply cookies for login state
+                driver.manage().addCookie(cookie);
             }
-            // driver.navigate().refresh(); // Refresh to apply login state
+
             Thread.sleep(3000);
             WebElement library = wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//button[@aria-label='Create playlist or folder']//span[@class='IconWrapper__Wrapper-sc-16usrgb-0 hYdsxw']//*[name()='svg']")));
             library.click();
